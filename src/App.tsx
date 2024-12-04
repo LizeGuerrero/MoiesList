@@ -26,7 +26,7 @@ const App: React.FC = () => {
       id: 4,
       title: "Your Name",
       genre: "Romance",
-      image: "https://pics.filmaffinity.com/Your_Name-845448662-large.jpg",
+      image: "https://m.media-amazon.com/images/M/MV5BNmEyZjI0M2MtNGFkOC00YTRlLWI0MGQtYTgyODY2MGRhMjc4XkEyXkFqcGc@._V1_.jpg",
     },
     {
       id: 5,
@@ -125,10 +125,30 @@ const App: React.FC = () => {
       image: "https://m.media-amazon.com/images/M/MV5BOWU1NTFlN2ItODEyMy00MWQ2LTkwZWMtZWVhN2E3ZDk0OWZkXkEyXkFqcGc@._V1_.jpg",
     }
   ]);
-  return(
+  
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Filtrar películas según el título o género
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    movie.genre.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  return (
     <div className="app-container">
       <h1 className="app-title">🎬 Movie List</h1>
-      <MovieList movies={movies} />
+
+      {/* Barra de búsqueda */}
+      <input
+        type="text"
+        placeholder="Buscar por título o género"
+        className="search-bar"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+
+      {/* Lista de películas filtradas */}
+      <MovieList movies={filteredMovies} />
     </div>
   );
 };

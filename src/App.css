@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #d6d2df;
   color: #333;
 }
 
@@ -31,7 +31,7 @@ body {
 .movie-card {
   max-width: 180px;
   width: 180px; /* Fijar el tamaño de las cards */
-  height: 350px; /* Altura fija para las cards */
+  height: 300px; /* Altura fija para las cards */
   margin: auto;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -76,7 +76,7 @@ body {
 
 /* Estilo para el modal cuando la imagen está ampliada */
 .swal2-popup.expanded {
-  width: 80% !important;  /* Aumentamos el tamaño del modal */
+  width: 80% !important; /* Aumentamos el tamaño del modal */
   height: auto !important; /* Aseguramos que la altura sea proporcional */
   max-width: none !important; /* Eliminamos cualquier límite de ancho */
   max-height: none !important; /* Eliminamos cualquier límite de altura */
@@ -88,5 +88,85 @@ body {
   width: 100% !important; /* La imagen ocupa todo el ancho del modal */
   height: auto !important; /* Aseguramos que la imagen mantenga su proporción */
   cursor: zoom-out; /* Cambiamos el cursor a un icono de "alejar" */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transición para escala y brillo */
 }
 
+/* Efecto hover para la imagen */
+.swal2-image.expanded:hover {
+  transform: scale(1.05); /* Escala ligeramente la imagen */
+  filter: brightness(1.2); /* Aumenta el brillo de la imagen */
+  cursor: zoom-out; /* Mantiene el cursor como zoom-out */
+}
+
+
+
+
+h1 {
+
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(90deg, #acc9fe, #6a11cb);
+  background-clip: text; /* Propiedad estándar */
+  -webkit-background-clip: text; /* Versión prefijada */
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+  color: #ff6f61; /* Cambia el color del texto al pasar el mouse */
+}
+
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+}
+
+
+
+
+/* Personalización general de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+  height: 12px; /* Altura de la barra horizontal */
+}
+
+/* El "track" es el fondo de la barra */
+::-webkit-scrollbar-track {
+  background-color: #dcbbf5; /* Color de fondo del track */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* El "thumb" es la parte de la barra que se mueve */
+::-webkit-scrollbar-thumb {
+  background-color: #837fff; /* Color de la parte movible */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Efecto hover sobre la parte movible */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #99afff; /* Color más oscuro cuando se pasa el ratón */
+}
+
+/* Personalización de la barra horizontal */
+::-webkit-scrollbar-horizontal {
+  height: 8px; /* Altura de la barra horizontal */
+}
+
+::-webkit-scrollbar-track-piece {
+  background: rgba(0, 0, 0, 0.1);
+}
