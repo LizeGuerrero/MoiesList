@@ -1,0 +1,92 @@
+/* Estilo global para resetear márgenes y fuentes */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Contenedor principal */
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Estilo para la lista de películas */
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Estilo de cada tarjeta */
+.movie-card {
+  max-width: 180px;
+  width: 180px; /* Fijar el tamaño de las cards */
+  height: 350px; /* Altura fija para las cards */
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la película */
+.movie-image {
+  width: 100%;
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Hace que la imagen cubra el área sin distorsionar */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Título y género de la película */
+.movie-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #444;
+  text-align: center;
+}
+
+.movie-card p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+
+/* Estilo para el modal cuando la imagen está ampliada */
+.swal2-popup.expanded {
+  width: 80% !important;  /* Aumentamos el tamaño del modal */
+  height: auto !important; /* Aseguramos que la altura sea proporcional */
+  max-width: none !important; /* Eliminamos cualquier límite de ancho */
+  max-height: none !important; /* Eliminamos cualquier límite de altura */
+  transition: all 0.3s ease; /* Añadimos una transición suave */
+}
+
+/* Estilo para la imagen cuando se amplía */
+.swal2-image.expanded {
+  width: 100% !important; /* La imagen ocupa todo el ancho del modal */
+  height: auto !important; /* Aseguramos que la imagen mantenga su proporción */
+  cursor: zoom-out; /* Cambiamos el cursor a un icono de "alejar" */
+}
+
