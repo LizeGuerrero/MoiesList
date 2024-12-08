@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./App.css";
 import MovieList from './components/MovieList';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [movies] = useState([
@@ -149,6 +150,7 @@ const App: React.FC = () => {
 
       {/* Lista de películas filtradas */}
       <MovieList movies={filteredMovies} />
+      <Footer />
     </div>
   );
 };
