@@ -2,7 +2,7 @@
 
 La **Movie App** es una aplicación web construida con **React** y **TypeScript**, utilizando **Vite** como herramienta de construcción. [Aquí](https://moies-list.vercel.app/), los usuarios pueden explorar una lista de películas, buscar por título o género y obtener información adicional sobre cada una. 
 
-Puedes ver la página en vivo [aquí](https://moies-list.vercel.app/).
+Puedes ver la página en vivo usa [aquí](https://moies-list.vercel.app/), que está alojada en Vercel
 
 ## Características
 
