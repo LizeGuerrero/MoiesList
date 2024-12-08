@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "./App.css";
 import MovieList from './components/MovieList';
 import Footer from './components/Footer';
-
+import Navbar from './components/Navbar';
 const App: React.FC = () => {
   const [movies] = useState([
     {
@@ -136,9 +136,13 @@ const App: React.FC = () => {
   );
 
   return (
+    
     <div className="app-container">
+      <Navbar />
+      <div id="home">
       <h1 className="app-title">🎬 Movie List</h1>
-
+      </div>
+      <div id="about">
       {/* Barra de búsqueda */}
       <input
         type="text"
@@ -147,10 +151,14 @@ const App: React.FC = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
+      </div>
 
       {/* Lista de películas filtradas */}
       <MovieList movies={filteredMovies} />
+
+      <div id="contact">
       <Footer />
+      </div>
     </div>
   );
 };

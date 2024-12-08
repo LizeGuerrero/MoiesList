@@ -1,74 +1,66 @@
-// components/Footer.tsx
 import React from 'react';
-import './Footer.css';  // Importamos el archivo de estilos
+import './Footer.css'; // Para aplicar los estilos personalizados
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer">
+    <div className="footer-container">
       <div className="footer-content">
-        <div className="footer-logo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="d-block mb-2"
-            role="img"
-            viewBox="0 0 24 24"
-          >
-            <title>Product</title>
-            <circle cx="12" cy="12" r="10" />
-            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
-          </svg>
-          <small>&copy; 2025</small>
+        <div className="intro">
+          <h3 className="text-center">¿Quieres agregar más películas?</h3>
+          <p className="text-center">
+            Contactanos<br />
+
+          </p>
+          <center>
+            <button className="btn">Get Started</button>
+          </center>
+          <hr />
         </div>
+
         <div className="footer-links">
-          <div>
-            <h5>Features</h5>
+          <div className="footer-column">
+            <h1 className="fw-bold">ML</h1>
+            <h4>Movie List</h4>
+          </div>
+          <div className="footer-column">
             <ul>
-              <li><a href="#">Cool stuff</a></li>
-              <li><a href="#">Random feature</a></li>
-              <li><a href="#">Team feature</a></li>
-              <li><a href="#">Stuff for developers</a></li>
-              <li><a href="#">Another one</a></li>
-              <li><a href="#">Last time</a></li>
+              <li className="fw-bold">Partnership</li>
+              <li><a href="#" className="footer-link">Website</a></li>
+              <li><a href="#" className="footer-link">Social Media</a></li>
+              <li><a href="#" className="footer-link">Branding</a></li>
             </ul>
           </div>
-          <div>
-            <h5>Resources</h5>
+          <div className="footer-column">
             <ul>
-              <li><a href="#">Resource name</a></li>
-              <li><a href="#">Resource</a></li>
-              <li><a href="#">Another resource</a></li>
-              <li><a href="#">Final resource</a></li>
+              <li className="fw-bold">About</li>
+              <li><a href="#" className="footer-link">Our Project</a></li>
+              <li><a href="#" className="footer-link">Careers</a></li>
             </ul>
           </div>
-          <div>
-            <h5>Business</h5>
+          <div className="footer-column">
             <ul>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Education</a></li>
-              <li><a href="#">Government</a></li>
-              <li><a href="#">Gaming</a></li>
+              <li className="fw-bold">Support</li>
+              <li><a href="#" className="footer-link">Contact</a></li>
+              <li><a href="#" className="footer-link">Support Request</a></li>
             </ul>
           </div>
-          <div>
-            <h5>About</h5>
-            <ul>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Locations</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
+          <div className="footer-column">
+            <li className="fw-bold">Follow us</li>
+            <ul className="social-links">
+              <li><a href="#" className="footer-link"><i className="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#" className="footer-link"><i className="fa-brands fa-whatsapp"></i></a></li>
+              <li><a href="#" className="footer-link"><i className="fa-brands fa-youtube"></i></a></li>
+              <li><a href="#" className="footer-link"><i className="fa-brands fa-instagram"></i></a></li>
             </ul>
           </div>
+        </div>
+        <hr />
+        <div className="footer-bottom">
+          <p>&copy; 2022 Copyright <a href="#" className="footer-link">Movie List</a></p>
         </div>
       </div>
-    </footer>
+    </div>
   );
-};
+}
 
 export default Footer;

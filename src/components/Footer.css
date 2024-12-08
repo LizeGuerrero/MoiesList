@@ -1,64 +1,91 @@
-/* styles/Footer.css */
-.footer {
-    background-color: #f8f9fa;
-    padding: 40px 20px;
-    color: #212529;
-  }
-  
-  .footer-content {
+.footer-container {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  color: white;
+  padding: 3rem 1rem;
+}
 
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .footer-logo svg {
-    margin-bottom: 10px;
-  }
-  
-  .footer-logo small {
-    font-size: 14px;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  .footer-links > div {
-    margin-bottom: 20px;
-    flex: 1;
-    min-width: 220px;
-  }
-  
-  .footer-links h5 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer-links ul li a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .footer-links ul li a:hover {
-    text-decoration: underline;
-  }
-  
+.footer-content {
+  text-align: center;
+}
+
+.intro p {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #0f0c29;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 1rem;
+  text-align: left;
+}
+
+.footer-column h1, .footer-column h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin: 0.5rem 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #ff9800;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.footer-link i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link i:hover {
+  color: #ff9800;
+}
+
+.footer-bottom p {
+
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: white;
+}
