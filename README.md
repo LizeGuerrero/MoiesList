@@ -26,13 +26,18 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
    git clone https://github.com/LizeGuerrero/MoiesList.git
 
 2. Navega al directorio del proyecto:
-cd movie-app
+   ```bash
+    cd movie-app
 
 4. Instala las dependencias:
-npm install
+     ```bash
+      npm install
 
 5. Ejecuta el servidor de desarrollo:
-npm run dev
+
+    ```bash
+    npm run dev
 
 Inicia el servidor de desarrollo usando Vite.
+
 
